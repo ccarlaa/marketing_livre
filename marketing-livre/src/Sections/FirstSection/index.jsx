@@ -12,21 +12,26 @@ const FirstSection = () => {
       <div className="title">
         <div>
           <Text type="headline" size="xl" color="white">
-            Transforme seu&nbsp;
+            Conectando&nbsp;
           </Text>
-          <Text type="headline" size="xl" color={colors.primary[300]}>negócio</Text>
-        </div>
-        <div className="second-line">
+          <Text type="headline" size="xl" color={colors.primary[300]}>Marcas&nbsp;</Text>
           <Text type="headline" size="xl" color="white">
-            com a&nbsp;
+            ao&nbsp;
           </Text>
-          <Text type="headline" size="xl" color={colors.primary[300]}>Marketing Livre Fácil</Text>
+          <Text type="headline" size="xl" color={colors.primary[300]}>Sucesso: &nbsp;</Text>
+        </div>
+        <div>
+        <Text type="headline" size="xl" color="white">
+          Descubra Nossa Abordagem&nbsp;
+          </Text>
+        </div>
+        <div>
+          <Text type="headline" size="xl" color={colors.primary[300]}>Estratégica de Marketing</Text>
         </div>
       </div>
       <div className="subtitle">
       <Text type="body" size="md">
-        A Marketing Livre Fácil está aqui para ser a força que impulsiona sua presença online, redefine sua narrativa e cria conexões poderosas com seu público-alvo.
-      </Text>
+      Não subestime o impacto do marketing. Descubra como o Marketing Livre Fácil pode definir o sucesso do seu negócio. Converse conosco e dê o primeiro passo!      </Text>
       </div>
       <div className="cta-button">
       <Button label="fale conosco" />
