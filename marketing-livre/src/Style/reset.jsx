@@ -8,8 +8,6 @@ export default createGlobalStyle`
         font-family: "IBM Plex Sans", sans-serif;
     }
 
-    // RESET
-
     html,
     body,
     div,
@@ -133,4 +131,4 @@ export default createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
     }
-`
+`;
