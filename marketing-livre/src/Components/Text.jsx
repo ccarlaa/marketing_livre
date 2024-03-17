@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import colors from "../Style/colors";
 import React from "react";
 
-const Text = ({size = "md", type = "body", color = colors.neutral[700], children=""}) => {
+const Text = ({size = "md", type = "body", color = "white", children=""}) => {
   const textSize = () => {
     if(type == "headline") {
       if(size == "xl") {
@@ -38,7 +37,7 @@ const Text = ({size = "md", type = "body", color = colors.neutral[700], children
       return "700";
     }
     if(type == "body") {
-      return "500";
+      return "400";
     }
   };
 
@@ -53,7 +52,7 @@ const TextComponent = styled.div`
   font-weight: ${props => props.weight};
   color: ${props => props.color};
   font-size: ${props => props.size.desktop};
-    
+
   @media (max-width: 768px) {
     font-size: ${props => props.size.mobile};
   }

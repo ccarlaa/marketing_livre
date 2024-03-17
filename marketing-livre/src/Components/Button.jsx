@@ -19,6 +19,12 @@ const ButtonComponent = styled.button`
   cursor: pointer;
   text-decoration: none;
   border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+
+
+  &:hover {
+    transform: scale(1.05); 
+  }
   
   @media (max-width: 768px) {
     height: 53px;
