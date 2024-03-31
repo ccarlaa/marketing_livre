@@ -85,7 +85,8 @@ const SwiperComponent = styled.div`
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 
     &:hover {
-      background-color: ${colors.neutral[100]};
+      background-color: ${colors.primary[100]};
+      color:  ${colors.primary[700]};
     }
   }
 

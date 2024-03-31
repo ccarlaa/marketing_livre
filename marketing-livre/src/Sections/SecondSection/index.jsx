@@ -55,7 +55,7 @@ const SecondSection = () => {
     );
 };
 
-const SecondSectionComponent = styled.div`
+const SecondSectionComponent = styled.section`
   text-align: center;
   display: flex;
   flex-direction: column;

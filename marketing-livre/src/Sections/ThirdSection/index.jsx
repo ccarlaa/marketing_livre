@@ -13,7 +13,7 @@ const ThirdSection = () => {
         <div className="infos">
             <div className="texts">
                 <Text type="headline" size="lg" color={colors.neutral[950]}>
-                Minha História
+                    Minha História
                 </Text>
                 <div className="description">
                     <Text type="body" size="md" color={colors.neutral[600]}>
@@ -48,14 +48,14 @@ const ThirdSection = () => {
   );
 };
 
-const ThirdSectionComponent = styled.div`
+const ThirdSectionComponent = styled.section`
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 720px;
+    height: auto;
     background-color: ${colors.neutral[50]};
-    padding: 0px 200px;
+    padding: 40px 200px;
     position: relative;
     flex-direction: column;
 
@@ -99,6 +99,5 @@ const ThirdSectionComponent = styled.div`
         padding: 60px 0px;
         width: 351px;
     }
-`;
-
+`
 export default ThirdSection;

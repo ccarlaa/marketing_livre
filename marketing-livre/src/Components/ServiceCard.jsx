@@ -1,36 +1,35 @@
 import React from "react";
 import styled from "styled-components";
-import colors from "../../Style/colors";
-import { ArchiveBoxIcon } from "@heroicons/react/24/outline";
-import Text from "../Text";
+import colors from "../Style/colors";
+import Text from "./Text";
 
-const SwiperCard = ({title, description, icon: Icon}) => {
+const ServiceCard = ({title, description, icon: Icon}) => {
   return (
-    <SwiperCardComponent>
+    <ServiceCardComponent>
       <div className="hero-icon-circle">
         <Icon className="hero-icon" />
       </div>
       <div className="title">
-        <Text size="sm" type="headline" color={colors.neutral[950]}>
+        <Text size="sm" type="headline" color={'white'}>
           {title}
         </Text>
       </div>
       <div className="description">
-        <Text size="sm" type="body" color={colors.neutral[950]}>
+        <Text size="sm" type="body" color={'white'}>
           {description}
         </Text>
       </div>
-    </SwiperCardComponent>
+    </ServiceCardComponent>
   );
 };
 
-const SwiperCardComponent = styled.div`
-  min-width: 350px;
-  height: 280px;
-  border: 1px solid ${colors.neutral[300]};
+const ServiceCardComponent = styled.div`
+  width: 100%;
+  border: 1px solid ${colors.neutral[50]};
   border-radius: 16px;
-  background-color: white;
   padding: 24px;
+  box-shadow: 0px 0px 15px #ffffff;
+
 
   .hero-icon-circle {
     width: 60px;
@@ -39,13 +38,15 @@ const SwiperCardComponent = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 14px;
-    background-color: ${colors.primary[400]};
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1); 
+
   }
 
   .hero-icon {
     width: 30px;
     height: 30px;
-    color: white;
+    color: ${colors.primary[300]};
   }
 
   .title {
@@ -58,5 +59,5 @@ const SwiperCardComponent = styled.div`
   }
 `;
 
-export default SwiperCard;
+export default ServiceCard;
 
