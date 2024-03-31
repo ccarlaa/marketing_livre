@@ -5,6 +5,7 @@ import colors from "../../Style/colors";
 import MySwiper from "../../Components/Swiper/SwiperComponent";
 import { CubeTransparentIcon, ArrowTrendingUpIcon, ChartBarIcon, MapPinIcon, FireIcon, Square3Stack3DIcon } from "@heroicons/react/24/outline";
 import Button from "../../Components/Button";
+
 const cards = [
   {
     title: "Diagnóstico Inicial",
@@ -61,6 +62,8 @@ const SecondSectionComponent = styled.div`
   justify-content: center;
   align-items: center;
   height: 620px;
+  padding: 0px 150px;
+
   background-color: ${colors.neutral[50]};
 
   .swiper-second-section {

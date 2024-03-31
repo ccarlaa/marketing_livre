@@ -43,7 +43,7 @@ const FirstSection = () => {
   );
 };
 
-const FirstSectionComponent = styled.header`
+const FirstSectionComponent = styled.div`
   width: 100%;
   height: 838px;
   display: flex;
@@ -85,7 +85,7 @@ const FirstSectionComponent = styled.header`
 const Gradient = styled.div`
   width: 100%;
   height: 50px;
-  background: linear-gradient(#010B17 50%, white 100%);
+  background: linear-gradient(#020D1B 50%, white 100%);
   
 `;
 export default FirstSection;
