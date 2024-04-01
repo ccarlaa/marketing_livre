@@ -41,7 +41,7 @@ const cards = [
 
 const SecondSection = () => {
     return (
-      <SecondSectionComponent>
+      <SecondSectionComponent id="section-consultancy">
         <Text type="headline" size="lg" color={colors.neutral[950]}>
           Consultoria gratuita
         </Text>

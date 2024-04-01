@@ -86,7 +86,7 @@ const FourthSection = () => {
   return (
     <>
     <GradientTop/>
-        <FourthSectionComponent>
+        <FourthSectionComponent id="section-services">
             <Text type="headline" size="lg" color={'white'}>
                 Nossos Serviços
             </Text>
@@ -99,7 +99,7 @@ const FourthSection = () => {
             })
             }  
             </div>         
-            <div className="cta-button">
+            <div className="cta-button" id="section-portfolio">
                 <Button label="fale conosco" />
             </div>
             <Text type="headline" size="lg" color={'white'}>

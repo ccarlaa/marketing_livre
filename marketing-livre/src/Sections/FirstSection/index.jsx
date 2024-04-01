@@ -8,7 +8,7 @@ import BackgroundImage from "../../Images/backgroundFirstSection.png";
 const FirstSection = () => {
   return (
     <>
-    <FirstSectionComponent>
+    <FirstSectionComponent id="section-start">
       <div className="title">
         <div>
             <Text type="headline" size="xl" color="white">

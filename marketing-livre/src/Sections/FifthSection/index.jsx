@@ -77,7 +77,7 @@ const cards = [
 
 const FifthSection = () => {
     return (
-        <FifthSectionComponent>
+        <FifthSectionComponent id="section-comments">
             <div className="header">
                 <Text type="headline" size="lg" color={colors.neutral[950]}>
                     O que dizem sobre nós?

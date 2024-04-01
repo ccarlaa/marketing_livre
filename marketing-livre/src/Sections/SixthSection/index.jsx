@@ -53,7 +53,7 @@ const questions = [
 
 const SixthSection = () => {
     return (
-        <SixthSectionComponent>
+        <SixthSectionComponent id="section-faq">
             <div className="header">
                 <Text type="headline" size="lg" color={colors.neutral[950]}>
                     Perguntas frequentes

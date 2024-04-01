@@ -9,7 +9,7 @@ import Button from "../../Components/Button";
 
 const ThirdSection = () => {
   return (
-    <ThirdSectionComponent>
+    <ThirdSectionComponent id="section-about">
         <div className="infos">
             <div className="texts">
                 <Text type="headline" size="lg" color={colors.neutral[950]}>
