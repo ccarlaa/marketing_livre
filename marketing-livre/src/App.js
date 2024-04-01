@@ -2,6 +2,7 @@ import FifthSection from "./Sections/FifthSection/index.jsx";
 import FirstSection from "./Sections/FirstSection/index.jsx";
 import FourthSection from "./Sections/FourthSection/index.jsx";
 import SecondSection from "./Sections/SecondSection/index.jsx";
+import SixthSection from "./Sections/SixthSection/index.jsx";
 import ThirdSection from "./Sections/ThirdSection/index.jsx";
 // import Header from "./Sections/Header.jsx";
 import GlobalStyle from "./Style/reset.jsx";
@@ -16,6 +17,7 @@ function App() {
 			<ThirdSection />
 			<FourthSection />
 			<FifthSection />
+			<SixthSection />
 		</>
 	);
 }

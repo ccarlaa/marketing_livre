@@ -71,7 +71,6 @@ const ThirdSectionComponent = styled.section`
 
         .description {
             padding-top: 40px;
-            line-height: 32px;
         }
     }
 
