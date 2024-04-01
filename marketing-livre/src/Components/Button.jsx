@@ -2,17 +2,17 @@ import styled from "styled-components";
 import Text from "./Text";
 import React from "react";
 
-const Button = ({ onClick= () => {}, label=""}) => {
+const Button = ({ onClick= () => {}, label="", size="md"}) => {
 
   return (
-    <ButtonComponent onClick={onClick}>
+    <ButtonComponent onClick={onClick} size={size}>
       <Text type="button" color="white">{label}</Text>
     </ButtonComponent>
   );
 };
 
 const ButtonComponent = styled.button`
-  height: 58px;
+  height: ${props => props.size == "md" ? '58px': '40px'};
   width: 100%;
   background: linear-gradient(150deg,  rgba(159,105,229,1) 0%, rgba(200,165,47,1) 100%);
   border: 0px;

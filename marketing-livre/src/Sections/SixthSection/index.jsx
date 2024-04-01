@@ -79,7 +79,7 @@ const SixthSectionComponent = styled.section`
     justify-content: center;
     align-items: center;
     height: auto;
-    padding: 40px 150px;
+    padding: 40px 200px;
     background-color: ${colors.neutral[50]};
     position: relative;
 
