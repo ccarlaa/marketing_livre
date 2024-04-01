@@ -1,3 +1,4 @@
+import FifthSection from "./Sections/FifthSection/index.jsx";
 import FirstSection from "./Sections/FirstSection/index.jsx";
 import FourthSection from "./Sections/FourthSection/index.jsx";
 import SecondSection from "./Sections/SecondSection/index.jsx";
@@ -14,6 +15,7 @@ function App() {
 			<SecondSection />
 			<ThirdSection />
 			<FourthSection />
+			<FifthSection />
 		</>
 	);
 }
