@@ -16,8 +16,11 @@ import {
     UsersIcon,
     ChatBubbleLeftRightIcon
 } from "@heroicons/react/24/outline";
-import colors from "../../Style/colors";
 import Text from "../../Components/Text";
+import portfolio1 from "../../Images/portfolio1.png";
+import portfolio2 from "../../Images/portfolio2.png";
+import portfolio3 from "../../Images/portfolio3.png";
+
 
 const cards = [
     {
@@ -105,7 +108,11 @@ const FourthSection = () => {
             <Text type="headline" size="lg" color={'white'}>
                 Alguns de nossos trabalhos
             </Text>
-            Fotos aqui
+            <div className="portfolio-images">
+                <img src={portfolio1} />
+                <img src={portfolio2} />
+                <img src={portfolio3} />
+            </div>
             <div className="cta-button">
                 <Button label="fale conosco" />
             </div>
@@ -138,9 +145,23 @@ const FourthSectionComponent = styled.section`
         padding: 46px 0px;
   }
 
-  .cta-button {
-    width: 351px;
-    padding-bottom: 46px;
+    .cta-button {
+        width: 351px;
+        padding-bottom: 46px;
+    }
+
+    .portfolio-images {
+        display: grid;
+        grid-template-rows: auto; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 10px;
+        padding: 40px 0px;
+
+        img {
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+        }
   }
 `;
 
