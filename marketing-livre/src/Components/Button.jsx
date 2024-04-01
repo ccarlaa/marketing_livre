@@ -2,10 +2,13 @@ import styled from "styled-components";
 import Text from "./Text";
 import React from "react";
 
-const Button = ({ onClick= () => {}, label="", size="md"}) => {
+const Button = ({label="", size="md"}) => {
+
+  const number = '5561999797939';
+  const message = "Olá, gostaria de agendar uma consultoria!"
 
   return (
-    <ButtonComponent onClick={onClick} size={size}>
+    <ButtonComponent size={size} onClick={() => window.open(`https://api.whatsapp.com/send?phone=${number}&text=${encodeURIComponent(message)}`)}>
       <Text type="button" color="white">{label}</Text>
     </ButtonComponent>
   );

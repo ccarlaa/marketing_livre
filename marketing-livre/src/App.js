@@ -9,6 +9,7 @@ import ThirdSection from "./Sections/ThirdSection/index.jsx";
 import GlobalStyle from "./Style/reset.jsx";
 import React from "react";
 import Header from "./Components/Header.jsx";
+import ButtonWhats from "./Components/ButtonWhats.jsx";
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 			<FifthSection />
 			<SixthSection />
 			<Footer />
+			<ButtonWhats />
 		</AppComponent>
 	);
 }
