@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Navigation, Pagination } from "swiper/modules";
-import StepCard from "../StepCard";
-import colors from "../../Style/colors";
-import CommentCard from "../CommentCard";
+import StepCard from "./StepCard";
+import colors from "../Style/colors";
+import CommentCard from "./CommentCard";
 
 
 const MySwiper = ({cards, type = "services"}) => {
@@ -37,10 +37,14 @@ const MySwiper = ({cards, type = "services"}) => {
           cards.map((card, index) => {
             return (
               <SwiperSlide key={index} className="swiper-slide">
-                {type === 'comments' ?
+                {
+                  type === 'comments' ?
                   <CommentCard name={card.name} comment={card.comment} description={card.description} numberStars={card.stars} img={card.img}/>
-                  :
+                  : type === "services" ?
                   <StepCard title={card.title} description={card.description} icon={card.icon}/>
+                  : type === "images" &&
+                  <img src={card} />
+
                 }
               </SwiperSlide>
             )
@@ -69,11 +73,20 @@ const SwiperComponent = styled.div`
 
   .swiper-slide {
     height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .icon {
     width: 30px;
 
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
   }
 
   .icon-circle {

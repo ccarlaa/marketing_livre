@@ -29,7 +29,8 @@ const Header = () => {
 
       useEffect(function () {
         function changeColor() {
-
+          console.log(window.scrollY)
+          console.log(positionFaq)
           if (
             positionStart != undefined &&
             positionConsultancy != undefined &&
@@ -75,8 +76,8 @@ const Header = () => {
 
     return (
     <HeaderComponent textColor={textColor}>
-        <div className="logo">
-            <img src={logo} onClick={() => scrollToElement('#section-start')}/>
+        <div className="logo" onClick={() => scrollToElement('#section-start')}>
+            <img src={logo} />
         </div>
         <div className="sections">
             <div className="section-start" onClick={() => scrollToElement('#section-start')}>
@@ -120,7 +121,7 @@ const HeaderComponent = styled.header`
     align-items: center;
     padding: 0px 200px;
     background-color: ${colors.neutral[50]};
-
+    
     .logo {
       cursor: pointer;
     }

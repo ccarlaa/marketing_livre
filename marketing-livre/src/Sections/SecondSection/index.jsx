@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Text from "../../Components/Text";
 import colors from "../../Style/colors";
-import MySwiper from "../../Components/Swiper/SwiperComponent";
+import MySwiper from "../../Components/SwiperComponent";
 import { CubeTransparentIcon, ArrowTrendingUpIcon, ChartBarIcon, MapPinIcon, FireIcon, Square3Stack3DIcon } from "@heroicons/react/24/outline";
 import Button from "../../Components/Button";
 

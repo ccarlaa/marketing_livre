@@ -20,6 +20,11 @@ import Text from "../../Components/Text";
 import portfolio1 from "../../Images/portfolio1.png";
 import portfolio2 from "../../Images/portfolio2.png";
 import portfolio3 from "../../Images/portfolio3.png";
+import portfolio4 from "../../Images/portfolio4.png";
+import portfolio5 from "../../Images/portfolio5.png";
+import portfolio6 from "../../Images/portfolio6.png";
+import portfolio7 from "../../Images/portfolio7.png";
+import MySwiper from "../../Components/SwiperComponent";
 
 
 const cards = [
@@ -85,6 +90,16 @@ const cards = [
     },
 ]
 
+const images = [
+    portfolio1,
+    portfolio2,
+    portfolio3,
+    portfolio4,
+    portfolio5,
+    portfolio6,
+    portfolio7,
+]
+
 const FourthSection = () => {
   return (
     <>
@@ -105,17 +120,12 @@ const FourthSection = () => {
             <div className="cta-button" id="section-portfolio">
                 <Button label="fale conosco" />
             </div>
-            <Text type="headline" size="lg" color={'white'}>
-                Alguns de nossos trabalhos
-            </Text>
-            <div className="portfolio-images">
-                <img src={portfolio1} />
-                <img src={portfolio2} />
-                <img src={portfolio3} />
+            <div className="title-two">
+                <Text type="headline" size="lg" color={'white'}>
+                    Alguns de nossos trabalhos
+                </Text>
             </div>
-            <div className="cta-button">
-                <Button label="fale conosco" />
-            </div>
+            <MySwiper type="images" cards={images} />
         </FourthSectionComponent>
     <GradientBottom />
     </>
@@ -162,6 +172,10 @@ const FourthSectionComponent = styled.section`
             height: 300px;
             border-radius: 8px;
         }
+  }
+
+  .title-two {
+    padding-bottom: 60px;
   }
 `;
 

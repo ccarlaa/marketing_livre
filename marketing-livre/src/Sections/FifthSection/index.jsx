@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Text from "../../Components/Text";
 import colors from "../../Style/colors";
-import MySwiper from "../../Components/Swiper/SwiperComponent";
+import MySwiper from "../../Components/SwiperComponent";
 import circlesLeft from "../../Images/fifth_section_circles_left.png";
 import circleRight from "../../Images/fifth_section_circle_right.png";
 import client1 from "../../Images/client1.png";
