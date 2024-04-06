@@ -3,6 +3,7 @@ import colors from "../Style/colors";
 import Button from "./Button";
 import React, { useEffect, useState } from "react";
 import logo from "../Images/logo.png";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
     const [textColor, setTextColor] = useState("section-start");
@@ -29,8 +30,6 @@ const Header = () => {
 
       useEffect(function () {
         function changeColor() {
-          console.log(window.scrollY)
-          console.log(positionFaq)
           if (
             positionStart != undefined &&
             positionConsultancy != undefined &&
@@ -103,8 +102,9 @@ const Header = () => {
             </div>
         </div>
         <div className="button-cta">
-            <Button label="CONSULTORIA GRÁTIS" size="sm" />
+          <Button label="CONSULTORIA GRÁTIS" size="sm" />
         </div>
+        <Sidebar />
     </HeaderComponent>
   );
 };
