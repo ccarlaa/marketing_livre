@@ -63,7 +63,6 @@ const SecondSectionComponent = styled.section`
   align-items: center;
   height: 620px;
   padding: 0px 150px;
-
   background-color: ${colors.neutral[50]};
 
   @media (max-width: 768px) {

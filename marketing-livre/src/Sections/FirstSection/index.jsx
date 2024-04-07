@@ -99,9 +99,11 @@ const FirstSectionComponent = styled.section`
 
   .cta-button {
     width: 351px;
+    padding: 0px 20px;
 
     @media (max-width: 768px) {
-      width: 100%;
+      display: flex;
+      flex-direction: column;
     }
   }
 `;

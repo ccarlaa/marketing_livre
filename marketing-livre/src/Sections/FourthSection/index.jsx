@@ -127,14 +127,14 @@ const FourthSection = () => {
             </div>
             <MySwiper type="images" cards={images} />
         </FourthSectionComponent>
-        <FourthSectionComponentMobile>
+        <FourthSectionComponentMobile id="section-services-mobile">
             <div className="title">
                 <Text type="headline" size="lg" color={'white'}>
                     Nossos Serviços
                 </Text>
             </div>
             <MySwiper type="jobs" cards={cards} />
-            <div className="cta-button" id="section-portfolio">
+            <div className="cta-button" id="section-portfolio-mobile">
                 <Button label="fale conosco" />
             </div>
             <MySwiper type="images" cards={images} />

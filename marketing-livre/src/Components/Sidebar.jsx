@@ -40,10 +40,10 @@ const Sidebar = () => {
             <div className="section-about" onClick={() => {scrollToElement("#section-about"); toggleSidebar()}}>
                 sobre nós
             </div>
-            <div className="section-services" onClick={() => {scrollToElement("#section-services"); toggleSidebar()}}>
+            <div className="section-services" onClick={() => {scrollToElement("#section-services-mobile"); toggleSidebar()}}>
                 serviços
             </div>
-            <div className="section-portfolio" onClick={() => {scrollToElement("#section-portfolio"); toggleSidebar()}}>
+            <div className="section-portfolio" onClick={() => {scrollToElement("#section-portfolio-mobile"); toggleSidebar()}}>
                 portfólio
             </div>
             <div className="section-comments" onClick={() => {scrollToElement("#section-comments"); toggleSidebar()}}>
@@ -134,11 +134,11 @@ const SidebarContainer = styled.div`
     }
 
     .section-services {
-      color: ${props => props.textColor == "section-services" ? colors.primary[500] : colors.neutral[950]};
+      color: ${props => props.textColor == "section-services-mobile" ? colors.primary[500] : colors.neutral[950]};
     }
 
     .section-portfolio {
-      color: ${props => props.textColor == "section-portfolio" ? colors.primary[500] : colors.neutral[950]};
+      color: ${props => props.textColor == "section-portfolio-mobile" ? colors.primary[500] : colors.neutral[950]};
     }
 
     .section-comments {

@@ -104,7 +104,9 @@ const Header = () => {
         <div className="button-cta">
           <Button label="CONSULTORIA GRÁTIS" size="sm" />
         </div>
-        <Sidebar />
+        <div className="mobile">
+          <Sidebar />
+        </div>
     </HeaderComponent>
   );
 };
@@ -122,9 +124,16 @@ const HeaderComponent = styled.header`
     padding: 0px 200px;
     background-color: ${colors.neutral[50]};
 
-
     @media (max-width: 768px) {
       padding: 20px;
+    }
+
+    .mobile {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
     }
     
     .logo {
