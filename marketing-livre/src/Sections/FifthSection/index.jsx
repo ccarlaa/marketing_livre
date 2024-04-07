@@ -114,22 +114,18 @@ const FifthSectionComponent = styled.section`
   padding: 0px 150px;
   background-color: ${colors.neutral[50]};
   position: relative;
+
+  @media (max-width: 1024px) {
+      padding: 50px 40px;
+  }
+
       
   @media (max-width: 768px) {
     padding: 0px;
     width: 100%;
     height: auto;
 
-    .header {
-      display: flex;
-      flex-direction: column;
-    }
   }
-
-  @media (max-width: 1024px) {
-      padding: 50px 40px;
-  }
-
 
 
     .header {
@@ -137,7 +133,9 @@ const FifthSectionComponent = styled.section`
         width: 60%;
             
       @media (max-width: 768px) {
-          display: flex;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
       }
 
     }
@@ -169,14 +167,13 @@ const FifthSectionComponent = styled.section`
         position: absolute;
         right: 220px;
         top: 120px;
-
-        @media (max-width: 1024px) {
-          right: 40px;
-        }
-
                 
         @media (max-width: 768px) {
             display: none;
+        }
+
+        @media (max-width: 1024px) {
+          right: 40px;
         }
 
     }
