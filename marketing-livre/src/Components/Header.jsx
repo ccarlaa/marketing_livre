@@ -124,7 +124,8 @@ const HeaderComponent = styled.header`
     padding: 0px 200px;
     background-color: ${colors.neutral[50]};
 
-    @media (max-width: 768px) {
+
+    @media (max-width: 1024px) {
       padding: 20px;
     }
 
@@ -144,7 +145,7 @@ const HeaderComponent = styled.header`
         width: 260px;
 
 
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
           display: none;
         }
     }

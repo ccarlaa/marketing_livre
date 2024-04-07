@@ -190,6 +190,10 @@ const FourthSectionComponent = styled.section`
         display: none;
     }
 
+    @media (max-width: 1024px) {
+        padding: 40px 100px;
+    }
+
 
   .service-cards {
         width: 100%;
@@ -198,6 +202,11 @@ const FourthSectionComponent = styled.section`
         grid-template-columns: 1fr 1fr 1fr 1fr; 
         gap: 10px;
         padding: 46px 0px;
+
+        @media (max-width: 1024px) {
+            grid-template-rows: auto auto auto; 
+            grid-template-columns: 1fr 1fr 1fr ; 
+        }
   }
 
     .cta-button {

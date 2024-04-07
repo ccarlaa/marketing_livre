@@ -114,7 +114,6 @@ const FifthSectionComponent = styled.section`
   padding: 0px 150px;
   background-color: ${colors.neutral[50]};
   position: relative;
-
       
   @media (max-width: 768px) {
     padding: 0px;
@@ -126,6 +125,11 @@ const FifthSectionComponent = styled.section`
       flex-direction: column;
     }
   }
+
+  @media (max-width: 1024px) {
+      padding: 50px 40px;
+  }
+
 
 
     .header {
@@ -166,10 +170,14 @@ const FifthSectionComponent = styled.section`
         right: 220px;
         top: 120px;
 
-            
-    @media (max-width: 768px) {
-        display: none;
-    }
+        @media (max-width: 1024px) {
+          right: 40px;
+        }
+
+                
+        @media (max-width: 768px) {
+            display: none;
+        }
 
     }
 

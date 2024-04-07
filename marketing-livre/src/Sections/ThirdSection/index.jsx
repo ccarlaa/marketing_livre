@@ -66,6 +66,10 @@ const ThirdSectionComponent = styled.section`
         padding: 40px 20px;
     }
 
+    @media (max-width: 1024px) {
+        padding: 40px 100px;
+    }
+
     .infos {
         display: flex;
         align-items: center;
@@ -105,6 +109,11 @@ const ThirdSectionComponent = styled.section`
 
             @media (max-width: 768px) {
                 width: 300px;
+                padding-top: 40px;
+           }
+
+            @media (max-width: 1024px) {
+                width: 400px;
                 padding-top: 40px;
             }
         }

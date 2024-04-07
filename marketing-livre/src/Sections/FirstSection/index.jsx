@@ -59,6 +59,15 @@ const FirstSectionComponent = styled.section`
   background-size: cover;
   background-position: center;
 
+  @media (max-width: 1024px) {
+    padding: 100px 20px;
+
+    .first-title {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   @media (max-width: 768px) {
       padding: 100px 20px;
     }

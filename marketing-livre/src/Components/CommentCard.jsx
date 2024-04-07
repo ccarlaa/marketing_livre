@@ -17,6 +17,10 @@ const CommentCard = ({img, name, comment, description, numberStars = 5}) => {
   flex-direction: column;
   justify-content: space-between;
 
+  @media (max-width: 1024px) {
+    min-width: 300px;
+  }
+
   @media (max-width: 768px) {
     min-width: 150px;
     height: 300px;

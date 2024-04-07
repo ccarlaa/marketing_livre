@@ -83,6 +83,10 @@ const SixthSectionComponent = styled.section`
     background-color: ${colors.neutral[50]};
     position: relative;
 
+    @media (max-width: 1024px) {
+        padding: 40px 100px 100px 100px;
+    }
+
     @media (max-width: 768px) {
         padding: 40px 20px 120px 20px;
     }
