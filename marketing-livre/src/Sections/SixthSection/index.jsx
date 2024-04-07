@@ -79,13 +79,21 @@ const SixthSectionComponent = styled.section`
     justify-content: center;
     align-items: center;
     height: auto;
-    padding: 40px 200px;
+    padding: 40px 200px 100px 200px;
     background-color: ${colors.neutral[50]};
     position: relative;
+
+    @media (max-width: 768px) {
+        padding: 40px 20px 120px 20px;
+    }
 
     .header {
         padding: 20px 0px;
         width: 60%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     .questions {
@@ -95,6 +103,11 @@ const SixthSectionComponent = styled.section`
         grid-template-columns: 1fr 1fr; 
         gap: 10px;
         padding-top: 40px;
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 `;
 

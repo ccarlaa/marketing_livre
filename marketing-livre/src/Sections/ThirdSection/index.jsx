@@ -31,6 +31,9 @@ const ThirdSection = () => {
                     </Text>
                 </div>
             </div>
+            <div className="button-cta-mobile">
+                <Button label="Fale Conosco" />
+            </div>
             <div className="image">
                 <img src={rocketImage} />
             </div>
@@ -59,15 +62,29 @@ const ThirdSectionComponent = styled.section`
     position: relative;
     flex-direction: column;
 
+    @media (max-width: 768px) {
+        padding: 40px 20px;
+    }
+
     .infos {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
     .texts {
         width: 50%;
         text-align: left;
+
+        @media (max-width: 768px) {
+            text-align: center;
+            width: 100%;
+        }
 
         .description {
             padding-top: 40px;
@@ -77,8 +94,19 @@ const ThirdSectionComponent = styled.section`
     .image {
         width: 50%;
 
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
         img {
             width: 600px;
+
+
+            @media (max-width: 768px) {
+                width: 300px;
+                padding-top: 40px;
+            }
         }
     }
 
@@ -86,17 +114,39 @@ const ThirdSectionComponent = styled.section`
         position: absolute;
         left: 0px;
         top: 40px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     .circles-right {
         position: absolute;
         right: 0px;
         top: 140px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     .button-cta {
         padding: 60px 0px;
         width: 351px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .button-cta-mobile {
+        width: 100%;
+        padding-top: 40px;
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
     }
 `
 export default ThirdSection;

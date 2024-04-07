@@ -7,8 +7,14 @@ const StarsContainer = styled.div`
     display: flex;
     gap: 5px;
 
+    
     .icon {
         width: 20px;
+
+        @media (max-width: 768px) {
+          width: 16px;
+          background-color: none;
+      }
     }
 `;
 

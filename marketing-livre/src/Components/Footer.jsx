@@ -19,6 +19,9 @@ const Footer = () => {
 
   return (
     <FooterComponent>
+        <div className="back-top-mobile" onClick={handleClick}> 
+            <ArrowDownIcon  className="icon-back-top"/>
+        </div>
         <div className="social-media">
             <a href="https://www.instagram.com/marketing.livrefacil/" target="_blank" rel="noopener noreferrer" className="social-media-icon">
                 <img src={instagram} />
@@ -42,28 +45,75 @@ const FooterComponent = styled.footer`
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 92px;
+    height: auto;
     width: 100%;
     background-color: ${colors.neutral[950]};
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 150px;
+    padding: 40px 150px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        padding: 20px 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .social-media {
-    display: flex;
-    gap: 10px;
+        display: flex;
+        gap: 10px;
+
+        @media (max-width: 768px) {
+            padding: 20px 0px;
+        }
     }
 
     .social-media-icon {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(150deg,  rgba(159,105,229,1) 0%, rgba(200,165,47,1) 100%);
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(150deg,  rgba(159,105,229,1) 0%, rgba(200,165,47,1) 100%);
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .back-top-mobile {
+        min-width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.1); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;     
+        transform: rotate(180deg);
+        cursor: pointer;
+        display: none;
+
+        @media (max-width: 768px) {
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+        }
+
+        &:hover {
+            background-color: ${colors.neutral[700]};
+        }
+
+        .icon-back-top {
+            width: 24px;
+        }
     }
 
     .back-top {
@@ -77,6 +127,10 @@ const FooterComponent = styled.footer`
         color: white;     
         transform: rotate(180deg);
         cursor: pointer;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
 
         &:hover {
             background-color: ${colors.neutral[700]};

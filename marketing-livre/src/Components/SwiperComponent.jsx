@@ -6,6 +6,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import StepCard from "./StepCard";
 import colors from "../Style/colors";
 import CommentCard from "./CommentCard";
+import ServiceCard from "./ServiceCard";
 
 
 const MySwiper = ({cards, type = "services"}) => {
@@ -20,6 +21,9 @@ const MySwiper = ({cards, type = "services"}) => {
           clickable: true,
         }}
         breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
           768: {
             slidesPerView: 2,
           },
@@ -42,10 +46,11 @@ const MySwiper = ({cards, type = "services"}) => {
                   <CommentCard name={card.name} comment={card.comment} description={card.description} numberStars={card.stars} img={card.img}/>
                   : type === "services" ?
                   <StepCard title={card.title} description={card.description} icon={card.icon}/>
-                  : type === "images" &&
+                  : type === "images" ?
                   <img src={card} />
-
-                }
+                  : type === "jobs" &&
+                  <ServiceCard  title={card.title} description={card.description} icon={card.icon}/>
+                  }
               </SwiperSlide>
             )
           })
@@ -63,7 +68,7 @@ const MySwiper = ({cards, type = "services"}) => {
 
 const SwiperComponent = styled.div`
   width: 100%;
-  height: 320px;
+  height: 340px;
   position: relative;
   position: relative;
 
@@ -82,6 +87,11 @@ const SwiperComponent = styled.div`
     width: 30px;
 
   }
+
+  .fZtIOX {
+    min-width: 100%;
+  }
+
 
   img {
     width: 300px;
@@ -106,6 +116,10 @@ const SwiperComponent = styled.div`
     &:hover {
       background-color: ${colors.primary[100]};
       color:  ${colors.primary[700]};
+    }
+
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 

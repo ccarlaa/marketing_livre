@@ -115,8 +115,8 @@ const FourthSection = () => {
                     <ServiceCard key={index} title={card.title} description={card.description} icon={card.icon}/>
                 )
             })
-            }  
-            </div>         
+            } 
+            </div>    
             <div className="cta-button" id="section-portfolio">
                 <Button label="fale conosco" />
             </div>
@@ -127,11 +127,51 @@ const FourthSection = () => {
             </div>
             <MySwiper type="images" cards={images} />
         </FourthSectionComponent>
+        <FourthSectionComponentMobile>
+            <div className="title">
+                <Text type="headline" size="lg" color={'white'}>
+                    Nossos Serviços
+                </Text>
+            </div>
+            <MySwiper type="jobs" cards={cards} />
+            <div className="cta-button" id="section-portfolio">
+                <Button label="fale conosco" />
+            </div>
+            <MySwiper type="images" cards={images} />
+
+        </FourthSectionComponentMobile>
+
     <GradientBottom />
     </>
 
   );
 };
+
+const FourthSectionComponentMobile = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    flex-direction: column;
+    background-image: url(${BackgroundImage});
+    display: none;
+    padding: 0px 20px;
+    
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 40px 0px;
+    }
+
+    .title {
+        text-align: center;
+        padding: 40px 0px;
+    }
+`
 
 const FourthSectionComponent = styled.section`
     width: 100%;
@@ -144,6 +184,11 @@ const FourthSectionComponent = styled.section`
     background-size: cover;
     background-position: center;
     padding: 0px 200px;
+
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 
 
   .service-cards {

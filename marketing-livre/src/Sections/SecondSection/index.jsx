@@ -46,7 +46,7 @@ const SecondSection = () => {
           Consultoria gratuita
         </Text>
         <div className="swiper-second-section"> 
-        <MySwiper cards={cards}/>
+          <MySwiper cards={cards}/>
         </div>
         <div className="button-cta">
           <Button label="agendar consultoria gratuita" />
@@ -66,15 +66,27 @@ const SecondSectionComponent = styled.section`
 
   background-color: ${colors.neutral[50]};
 
+  @media (max-width: 768px) {
+    padding: 0px 20px;
+  }
+
   .swiper-second-section {
     width: 100%;
     display: flex;
     padding: 48px;
     justify-content: flex-end;
+
+    @media (max-width: 768px) {
+      padding: 40px 0px;
+    }
   }
 
   .button-cta {
     width: 400px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 `;
 

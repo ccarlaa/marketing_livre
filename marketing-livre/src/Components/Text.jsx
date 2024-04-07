@@ -5,25 +5,25 @@ const Text = ({size = "md", type = "body", color = "white", children=""}) => {
   const textSize = () => {
     if(type == "headline") {
       if(size == "xl") {
-        return {desktop: "64px", mobile: "32px", lineHeight: '64px'};
+        return {desktop: "64px", mobile: "28px", lineHeight: '64px', mobileLineHeight: '44px'};
       }
       if(size == "lg") {
-        return {desktop: "40px", mobile: "24px", lineHeight: '30px'};
+        return {desktop: "40px", mobile: "24px", lineHeight: '30px', mobileLineHeight: '26px'};
       }
       if(size == "md") {
-        return {desktop: "32px", mobile: "16px", lineHeight: '26px'};
+        return {desktop: "32px", mobile: "18px", lineHeight: '26px', mobileLineHeight: '22px'};
       }
       if(size == "sm") {
-        return {desktop: "24px", mobile: "14px", lineHeight: '24px'};
+        return {desktop: "24px", mobile: "14px", lineHeight: '24px', mobileLineHeight: '20px'};
       }
     }
 
     if(type == "body") {
       if(size == "md") {
-        return {desktop: "20px", mobile: "16px", lineHeight: '26px'};
+        return {desktop: "20px", mobile: "16px", lineHeight: '26px', mobileLineHeight: '22px'};
       }
       if(size == "sm") {
-        return {desktop: "16px", mobile: "12px", lineHeight: '20px'};
+        return {desktop: "16px", mobile: "12px", lineHeight: '20px', mobileLineHeight: '18px'};
       }
     }
 
@@ -56,6 +56,7 @@ const TextComponent = styled.div`
   
   @media (max-width: 768px) {
     font-size: ${props => props.size.mobile};
+    line-height: ${props => props.size.mobileLineHeight};
   }
 `;
 export default Text;

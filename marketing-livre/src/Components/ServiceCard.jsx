@@ -30,6 +30,13 @@ const ServiceCardComponent = styled.div`
   padding: 24px;
   box-shadow: 0px 0px 15px #ffffff;
 
+  @media (max-width: 768px) {
+    max-width: 300px;
+    height: 280px;
+    text-align: left;
+    background-color: none;
+  }
+
 
   .hero-icon-circle {
     width: 60px;

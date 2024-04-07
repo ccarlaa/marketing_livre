@@ -121,6 +121,11 @@ const HeaderComponent = styled.header`
     align-items: center;
     padding: 0px 200px;
     background-color: ${colors.neutral[50]};
+
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
     
     .logo {
       cursor: pointer;
@@ -128,6 +133,11 @@ const HeaderComponent = styled.header`
 
     .button-cta {
         width: 260px;
+
+
+        @media (max-width: 768px) {
+          display: none;
+        }
     }
 
     .sections {
@@ -138,6 +148,10 @@ const HeaderComponent = styled.header`
         cursor: pointer;
         font-weight: 500;
         text-transform: uppercase;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
     }
 
     .section-start {

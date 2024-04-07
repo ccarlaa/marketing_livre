@@ -5,6 +5,7 @@ import colors from "../Style/colors";
 import Stars from "./Stars";
 
 const CommentCard = ({img, name, comment, description, numberStars = 5}) => {
+
   const CommentCardComponent = styled.div`
   min-width: 450px;
   height: 280px;
@@ -15,6 +16,12 @@ const CommentCard = ({img, name, comment, description, numberStars = 5}) => {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    min-width: 150px;
+    height: 300px;
+  }
+
 
   .comment {
     text-align: left;

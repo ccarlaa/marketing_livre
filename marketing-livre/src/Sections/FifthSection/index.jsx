@@ -77,6 +77,7 @@ const cards = [
 
 const FifthSection = () => {
     return (
+      <>
         <FifthSectionComponent id="section-comments">
             <div className="header">
                 <Text type="headline" size="lg" color={colors.neutral[950]}>
@@ -97,8 +98,11 @@ const FifthSection = () => {
                 <img src={circleRight} />
             </div>
         </FifthSectionComponent>
+
+        </>
     );
 };
+
 
 const FifthSectionComponent = styled.section`
   text-align: center;
@@ -111,9 +115,27 @@ const FifthSectionComponent = styled.section`
   background-color: ${colors.neutral[50]};
   position: relative;
 
+      
+  @media (max-width: 768px) {
+    padding: 0px;
+    width: 100%;
+    height: auto;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+
     .header {
         padding: 20px 0px;
         width: 60%;
+            
+      @media (max-width: 768px) {
+          display: flex;
+      }
+
     }
 
     .swiper-second-section {
@@ -121,18 +143,34 @@ const FifthSectionComponent = styled.section`
         display: flex;
         padding: 48px;
         justify-content: flex-end;
+
+        @media (max-width: 768px) {
+          padding: 20px;
+        }
     }
 
     .circles-left {
         position: absolute;
         left: 0px;
         top: 180px;
+
+            
+    @media (max-width: 768px) {
+        display: none;
+    }
+
     }
 
     .circle-right {
         position: absolute;
         right: 220px;
         top: 120px;
+
+            
+    @media (max-width: 768px) {
+        display: none;
+    }
+
     }
 
 `;
