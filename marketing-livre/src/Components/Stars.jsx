@@ -8,12 +8,11 @@ const StarsContainer = styled.div`
     gap: 5px;
 
     
-    .icon {
+    .icon-star {
         width: 20px;
 
         @media (max-width: 768px) {
           width: 16px;
-          background-color: none;
       }
     }
 `;
@@ -38,7 +37,7 @@ const Stars = ({ number = 3 }) => {
         <Star
           key={index}
           active={index < number}
-          className="icon"
+          className="icon-star"
         />
       ))}
     </StarsContainer>
