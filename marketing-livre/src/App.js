@@ -23,7 +23,7 @@ function App() {
 			<FifthSection />
 			<SixthSection />
 			<Footer />
-			{/* <ButtonWhats /> */}
+			<ButtonWhats />
 		</AppComponent>
 	);
 }
