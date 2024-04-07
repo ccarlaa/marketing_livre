@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import colors from '../Style/colors';
@@ -9,16 +9,17 @@ const Sidebar = () => {
   const [textColor, setTextColor] = useState("section-start");
 
   const toggleSidebar = () => {
+    console.log('oe')
     setIsOpen(!isOpen);
   };
 
   function scrollToElement(id) {
-    setTextColor(id.replace('#', ''))
-    console.log(textColor)
+    setTextColor(id.replace('#', ''));
     const element = document.querySelector(`${id}`);
     if (element != null) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    toggleSidebar();
   }
 
   return (
@@ -31,39 +32,37 @@ const Sidebar = () => {
           <Bars3Icon className='icon'/>
         </div>
         <div className="sections">
-            <div className="section-start" onClick={() => {scrollToElement('#section-start'); toggleSidebar()}}>
-                início
-            </div>
-            <div className="section-consultancy" onClick={() => {scrollToElement('#section-consultancy'); toggleSidebar()}}>
-                consultoria
-            </div>
-            <div className="section-about" onClick={() => {scrollToElement("#section-about"); toggleSidebar()}}>
-                sobre nós
-            </div>
-            <div className="section-services" onClick={() => {scrollToElement("#section-services-mobile"); toggleSidebar()}}>
-                serviços
-            </div>
-            <div className="section-portfolio" onClick={() => {scrollToElement("#section-portfolio-mobile"); toggleSidebar()}}>
-                portfólio
-            </div>
-            <div className="section-comments" onClick={() => {scrollToElement("#section-comments"); toggleSidebar()}}>
-                depoimentos
-            </div>
-            <div className="section-faq" onClick={() => {scrollToElement("#section-faq");toggleSidebar()}}>
-                faq
-            </div>
-            <div className="cta-button">
-                <Button label="fale conosco" />
-            </div>
+          <div className="section-start" onClick={() => scrollToElement('#section-start')}>
+            início
+          </div>
+          <div className="section-consultancy" onClick={() => scrollToElement('#section-consultancy')}>
+            consultoria
+          </div>
+          <div className="section-about" onClick={() => scrollToElement("#section-about")}>
+            sobre nós
+          </div>
+          <div className="section-services" onClick={() => scrollToElement("#section-services-mobile")}>
+            serviços
+          </div>
+          <div className="section-portfolio" onClick={() => scrollToElement("#section-portfolio-mobile")}>
+            portfólio
+          </div>
+          <div className="section-comments" onClick={() => scrollToElement("#section-comments")}>
+            depoimentos
+          </div>
+          <div className="section-faq" onClick={() => scrollToElement("#section-faq")}>
+            faq
+          </div>
+          <div className="cta-button">
+            <Button label="fale conosco" />
+          </div>
         </div>
-
       </SidebarContainer>
     </>
   );
 };
 
 export default Sidebar;
-
 
 const HeaderIcon = styled.div`
     width: 40px;
@@ -75,12 +74,20 @@ const HeaderIcon = styled.div`
     border-radius: 8px;
     color: white;
     cursor: pointer;
+    position: fixed;
+    top: 25px;
+    right: 20px;
+    z-index: 20;
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+    }
 
     .icon {
         width: 30px;
     }
-`
-
+`;
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -95,6 +102,7 @@ const SidebarContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: end;
+  z-index: 30;
 
   .close-icon {
     width: 40px;
@@ -119,34 +127,35 @@ const SidebarContainer = styled.div`
     text-align: right;
     gap: 40px;
     width: 100%;
+    font-weight: 500;
   }
 
   .section-start {
-      color: ${props => props.textColor == "section-start" ? colors.primary[500] : colors.neutral[950]};
+      color: ${props => props.textColor === "section-start" ? colors.primary[500] : colors.neutral[950]};
     }
 
     .section-consultancy {
-      color: ${props => props.textColor == "section-consultancy" ? colors.primary[500] : colors.neutral[950]};
+      color: ${props => props.textColor === "section-consultancy" ? colors.primary[500] : colors.neutral[950]};
     }
 
     .section-about {
-      color: ${props => props.textColor == "section-about" ? colors.primary[500] : colors.neutral[950]};
+      color: ${props => props.textColor === "section-about" ? colors.primary[500] : colors.neutral[950]};
     }
 
     .section-services {
-      color: ${props => props.textColor == "section-services-mobile" ? colors.primary[500] : colors.neutral[950]};
+      color: ${props => props.textColor === "section-services-mobile" ? colors.primary[500] : colors.neutral[950]};
     }
 
     .section-portfolio {
-      color: ${props => props.textColor == "section-portfolio-mobile" ? colors.primary[500] : colors.neutral[950]};
+      color: ${props => props.textColor === "section-portfolio-mobile" ? colors.primary[500] : colors.neutral[950]};
     }
 
     .section-comments {
-      color: ${props => props.textColor == "section-comments" ? colors.primary[500] : colors.neutral[950]};
+      color: ${props => props.textColor === "section-comments" ? colors.primary[500] : colors.neutral[950]};
     }
 
     .section-faq {
-      color: ${props => props.textColor == "section-faq" ? colors.primary[500] : colors.neutral[950]};
+      color: ${props => props.textColor === "section-faq" ? colors.primary[500] : colors.neutral[950]};
     }
 
     .cta-button {

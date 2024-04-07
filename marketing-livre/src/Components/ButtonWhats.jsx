@@ -19,6 +19,7 @@ const ButtonWhatsComponent = styled.div`
   bottom: 40px;
   right: 40px;
   cursor: pointer;
+  z-index: 10;
 
   img {
     width: 60px;

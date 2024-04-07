@@ -62,12 +62,12 @@ const ThirdSectionComponent = styled.section`
     position: relative;
     flex-direction: column;
 
-    @media (max-width: 768px) {
-        padding: 40px 20px;
-    }
-
     @media (max-width: 1024px) {
         padding: 40px 100px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px 20px;
     }
 
     .infos {
@@ -113,7 +113,7 @@ const ThirdSectionComponent = styled.section`
            }
 
             @media (max-width: 1024px) {
-                width: 400px;
+                width: 300px;
                 padding-top: 40px;
             }
         }

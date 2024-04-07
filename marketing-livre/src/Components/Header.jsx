@@ -9,7 +9,7 @@ const Header = () => {
     const [textColor, setTextColor] = useState("section-start");
 
     function DiscoverPosition(id) {
-        if (typeof document != "undefined") {
+        if (typeof document !== "undefined") {
           const element = document.querySelector(`#section-${id}`);
           if (element != null) {
             const rect = element.getBoundingClientRect();
@@ -28,7 +28,7 @@ const Header = () => {
       const positionComments = DiscoverPosition("comments");
       const positionFaq = DiscoverPosition("faq");
 
-      useEffect(function () {
+      useEffect(() => {
         function changeColor() {
           if (
             positionStart != undefined &&
@@ -42,19 +42,19 @@ const Header = () => {
             if (window.scrollY < positionConsultancy && positionConsultancy) {
               setTextColor("section-start");
             }
-            if (window.scrollY >= positionConsultancy && window.screenY < positionAbout) {
+            if (window.scrollY >= positionConsultancy && window.scrollY < positionAbout) {
                 setTextColor("section-consultancy");
               }
-            if (window.scrollY >= positionAbout && window.screenY < positionServices) {
+            if (window.scrollY >= positionAbout && window.scrollY < positionServices) {
               setTextColor("section-about");
             }
-            if (window.scrollY >= positionServices && window.screenY < positionPortfolio) {
+            if (window.scrollY >= positionServices && window.scrollY < positionPortfolio) {
               setTextColor("section-services");
             }
-            if (window.scrollY >= positionPortfolio && window.screenY < positionComments) {
+            if (window.scrollY >= positionPortfolio && window.scrollY < positionComments) {
               setTextColor("section-portfolio");
             }
-            if (window.scrollY >= positionComments && window.screenY < positionFaq) {
+            if (window.scrollY >= positionComments && window.scrollY < positionFaq) {
               setTextColor("section-comments");
             }
             if (window.scrollY >= positionFaq - 300) {
@@ -64,7 +64,10 @@ const Header = () => {
         }
     
         window.addEventListener("scroll", changeColor);
-      },);
+
+        // Cleanup do event listener
+        return () => window.removeEventListener("scroll", changeColor);
+      }, []);
     
       function scrollToElement(id) {
         const element = document.querySelector(`${id}`);
@@ -104,9 +107,6 @@ const Header = () => {
         <div className="button-cta">
           <Button label="CONSULTORIA GRÁTIS" size="sm" />
         </div>
-        <div className="mobile">
-          <Sidebar />
-        </div>
     </HeaderComponent>
   );
 };
@@ -129,13 +129,6 @@ const HeaderComponent = styled.header`
       padding: 20px;
     }
 
-    .mobile {
-      display: none;
-
-      @media (max-width: 768px) {
-        display: block;
-      }
-    }
     
     .logo {
       cursor: pointer;

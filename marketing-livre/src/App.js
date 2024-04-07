@@ -10,12 +10,14 @@ import GlobalStyle from "./Style/reset.jsx";
 import React from "react";
 import Header from "./Components/Header.jsx";
 import ButtonWhats from "./Components/ButtonWhats.jsx";
+import Sidebar from "./Components/Sidebar.jsx";
 
 function App() {
 	return (
 		<AppComponent>
-			<Header />
 			<GlobalStyle />
+			<Header />
+			<Sidebar />
 			<FirstSection />
 			<SecondSection />
 			<ThirdSection />
