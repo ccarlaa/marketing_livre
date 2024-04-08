@@ -9,7 +9,6 @@ const Sidebar = () => {
   const [textColor, setTextColor] = useState("section-start");
 
   const toggleSidebar = () => {
-    console.log('oe')
     setIsOpen(!isOpen);
   };
 
@@ -24,39 +23,40 @@ const Sidebar = () => {
 
   return (
     <>
+      <Background onClick={toggleSidebar} display={isOpen}/>
       <HeaderIcon onClick={toggleSidebar}>
         <Bars3Icon className='icon'/>
       </HeaderIcon>
       <SidebarContainer isOpen={isOpen} textColor={textColor}>
-        <div className='close-icon' onClick={toggleSidebar}>
-          <Bars3Icon className='icon'/>
-        </div>
-        <div className="sections">
-          <div className="section-start" onClick={() => scrollToElement('#section-start')}>
-            início
-          </div>
-          <div className="section-consultancy" onClick={() => scrollToElement('#section-consultancy')}>
-            consultoria
-          </div>
-          <div className="section-about" onClick={() => scrollToElement("#section-about")}>
-            sobre nós
-          </div>
-          <div className="section-services" onClick={() => scrollToElement("#section-services-mobile")}>
-            serviços
-          </div>
-          <div className="section-portfolio" onClick={() => scrollToElement("#section-portfolio-mobile")}>
-            portfólio
-          </div>
-          <div className="section-comments" onClick={() => scrollToElement("#section-comments")}>
-            depoimentos
-          </div>
-          <div className="section-faq" onClick={() => scrollToElement("#section-faq")}>
-            faq
+          <div className="sections">
+            <div className='close-icon' onClick={toggleSidebar}>
+              <Bars3Icon className='icon'/>
+            </div>
+            <div className="section-start" onClick={() => scrollToElement('#section-start')}>
+              INÍCIO
+            </div>
+            <div className="section-consultancy" onClick={() => scrollToElement('#section-consultancy')}>
+              CONSULTORIA
+            </div>
+            <div className="section-about" onClick={() => scrollToElement("#section-about")}>
+              SOBRE NÓS
+            </div>
+            <div className="section-services" onClick={() => scrollToElement("#section-services-mobile")}>
+              SERVIÇOS
+            </div>
+            <div className="section-portfolio" onClick={() => scrollToElement("#section-portfolio-mobile")}>
+              PORTFÓLIO
+            </div>
+            <div className="section-comments" onClick={() => scrollToElement("#section-comments")}>
+              DEPOIMENTOS
+            </div>
+            <div className="section-faq" onClick={() => scrollToElement("#section-faq")}>
+              FAQ
+            </div>
           </div>
           <div className="cta-button">
             <Button label="fale conosco" />
           </div>
-        </div>
       </SidebarContainer>
     </>
   );
@@ -88,6 +88,19 @@ const HeaderIcon = styled.div`
         width: 30px;
     }
 `;
+
+const Background = styled.div`
+  background-color: ${colors.neutral[950]};
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  display: ${props => props.display ? "block": "none"};
+  
+`
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -128,6 +141,8 @@ const SidebarContainer = styled.div`
     gap: 40px;
     width: 100%;
     font-weight: 500;
+    justify-content: flex-end;
+    align-items: end;
   }
 
   .section-start {

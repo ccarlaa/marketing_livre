@@ -26,12 +26,12 @@ const Footer = () => {
             <a href="https://www.instagram.com/marketing.livrefacil/" target="_blank" rel="noopener noreferrer" className="social-media-icon">
                 <img src={instagram} />
             </a>
-            <div className="social-media-icon">
+            <a className="social-media-icon" href="https://www.linkedin.com/company/marketinglivrefacil/"target="_blank" rel="noopener noreferrer" className="social-media-icon">
                 <img src={linkedin} />
-            </div>
-            <div className="social-media-icon">
+            </a>
+            <a className="social-media-icon" href="https://m.facebook.com/profile.php?id=61553287040749&name=xhp_nt__fb__action__open_user" target="_blank" rel="noopener noreferrer" className="social-media-icon">
                 <img src={facebook} />
-            </div>
+            </a>
         </div>
         <Text size="sm" type="body" color={'white'}>Copyright 2024 © Marketing Livre Fácil. Todos os Direitos Reservados.</Text>
         <div className="back-top" onClick={handleClick}> 
