@@ -21,17 +21,17 @@ const FirstSection = () => {
               <Text type="headline" size="xl" color="white">
               ao&nbsp;
               </Text>
-              <Text type="headline" size="xl" color={colors.primary[300]}>Sucesso: &nbsp;</Text>
+              <Text type="headline" size="xl" color={colors.primary[300]}>Sucesso</Text>
             </div>
         </div>
         <div>
-        <Text type="headline" size="xl" color="white">
-            Descubra Nossa Abordagem&nbsp;
-        </Text>
+          {/* <Text type="headline" size="xl" color="white">
+              Descubra Nossa Abordagem&nbsp;
+          </Text> */}
         </div>
-        <div>
+          {/* <div>
             <Text type="headline" size="xl" color={colors.primary[300]}>Estratégica de Marketing</Text>
-        </div>
+          </div> */}
         </div>
         <div className="subtitle">
         <Text type="body" size="md">
@@ -99,7 +99,7 @@ const FirstSectionComponent = styled.section`
   .subtitle {
     width: 45%;
     text-align: center;
-    padding: 56px 0px 30px 0px;
+    padding: 30px 0px 30px 0px;
 
     @media (max-width: 768px) {
       width: 100%;
